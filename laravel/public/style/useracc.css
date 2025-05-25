@@ -1,0 +1,205 @@
+@font-face {
+    font-family: "Bergamasco Bold";
+    src:
+      local("Bergamasco Bold"),
+      url("../fonts/Bergamasco\ Bold.otf")
+  }
+
+@font-face {
+    font-family: "Bergamasco Light";
+    src:
+      local("Bergamasco Light"),
+      url("../fonts/Bergamasco\ Light.otf")
+  }
+
+@font-face {
+    font-family: "Bergamasco Regular";
+    src:
+      local("Bergamasco Regular"),
+      url("../fonts/Bergamasco\ Regular.otf")
+  }
+
+.tickets{
+    align-items: center;
+    max-width: 800px;
+    background-color: transparent;
+    color: white;
+    margin-left: 280px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bilet{
+    text-decoration: none;
+    border: 1px white solid;
+}
+
+.ticketzagalov{
+    color: white;
+     margin-left: 280px;
+    font-family: Bergamasco Light;
+    margin-bottom: 20px;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.useracc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.nickname{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.emailuser{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    color: white;
+    font-size: 32px;
+}
+
+.btnexit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #68191F ;
+    background-color: #68191F;
+    width:65px;
+    height:55px;
+    margin-left: 800px;
+    border-radius:5px ;
+}
+
+.btnexit img{
+    background-color: transparent;
+    width: 39px;
+    height: 39px;
+}
+
+
+@media screen and (max-width: 821px){
+ /* блок пользователь начало */
+ .user{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.tickets{
+    align-items: center;
+    max-width: 800px;
+    background-color: transparent;
+    color: white;
+    margin-left: 60px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.userphoto{
+   width: 200px;
+}
+
+.useracc{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.nickname{
+   font-size: 32px;
+   font-weight: 300;
+   margin-bottom: 20px;
+}
+
+.emailuser{
+   font-size: 24px;
+}
+
+.btnexit{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width:65px;
+   height:55px;
+   margin-left: 340px;
+   border-radius:5px ;
+}
+
+.btnexit img{
+   width: 39px;
+   height: 39px;
+}
+/* блок пользователь конец */
+}
+
+/* адаптив телефон начало */
+@media screen and (max-width: 415px){
+
+ .user{
+   margin-left: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.userphoto{
+   width: 100px;
+}
+
+.useracc{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.nickname{
+   width: 200px;
+   font-size: 20px;
+   font-weight: 300;
+   margin-bottom: 10px;
+}
+
+.emailuser{
+   font-size: 14px;
+}
+
+.btnexit{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width:35px;
+   height:35px;
+   margin-left: 0px;
+   border-radius:5px ;
+}
+
+.btnexit img{
+   width: 25px;
+   height: 25px;
+}
+
+.tickets{
+    align-items: center;
+    max-width: 800px;
+    background-color: transparent;
+    color: white;
+    margin-left: 60px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* блок пользователь конец */
+}

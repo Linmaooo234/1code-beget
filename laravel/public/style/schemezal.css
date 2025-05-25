@@ -1,0 +1,899 @@
+* {
+    background-color: #000000;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Bergamasco Bold";
+    src:
+      local("Bergamasco Bold"),
+      url("../fonts/Bergamasco\ Bold.otf")
+  }
+
+@font-face {
+    font-family: "Bergamasco Light";
+    src:
+      local("Bergamasco Light"),
+      url("../fonts/Bergamasco\ Light.otf")
+  }
+
+@font-face {
+    font-family: "Bergamasco Regular";
+    src:
+      local("Bergamasco Regular"),
+      url("../fonts/Bergamasco\ Regular.otf")
+  }
+
+/* шапка начало */
+header {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+nav {
+    margin-left: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.headerpunkt {
+    color: white;
+    font-size: 14px;
+}
+
+.enter{
+    position: relative;
+    left: 290px;
+    color: white;
+    border:0.1px solid white;
+    width: 141px;
+    font-weight: lighter;
+    height: 24px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.enter:hover{
+    background-color: white;
+    color: black;
+}
+
+.logotip{
+    width: 120px;
+}
+/* шапка конец */
+
+/* блок схема зала начало */
+    .schema{
+        display: flex;
+        flex-direction: column;
+        border: 1px white solid;
+        background-color: transparent;
+        margin-top: 50px;
+        width: 1620px;
+        height: 920px;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat";
+        color: white;
+    }
+
+    .schemazalaa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ryad{
+        display: flex;
+        gap: 30px;
+    }
+
+    .ryadchislo{
+        display: flex;
+        gap: 60px;
+        margin-left: 40px;
+    }
+
+    .chislo{
+        margin-top: 30px;
+    }
+
+    .seat{
+        border: 1px white solid;
+        width: 41px;
+        height: 37px;
+        margin-top: 20px;
+    }
+
+    .scene{
+        background-color: transparent;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .nazvaniescen{
+        color: white;
+        font-family: "Montserrat";
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    .nazvaniescen2{
+        color: white;
+        font-family: "Montserrat";
+        font-size: 20px;
+        font-weight: 200;
+        margin-top: 50px;
+    }
+
+    .scenes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .category1{
+        background-color: #719C5D;
+    }
+
+    .category2{
+        background-color: #FFD7D7;
+    }
+
+    .category3{
+        background-color:#6F8DBA ;
+    }
+
+    .category4{
+        background-color: #AD86CC;
+    }
+
+    .category5{
+        background-color: #FFE0B2;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+    }
+
+    .close-button {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close-button:hover, .close-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .zagolovmodal{
+        margin-top: 15px;
+        font-family: "Montserrat";
+        background-color: transparent;
+    }
+
+    .opisaniemodal{
+        margin-top: 15px;
+        font-family: "Montserrat";
+        background-color: transparent;
+    }
+
+    .modalbtnn{
+        margin-top: 16px;
+        width: 130px;
+        height: 20px;
+        font-size: 14px;
+        font-family: "Montserrat";
+        background-color: transparent;
+        transition: 0.5s;
+        color: black;
+    }
+
+    .modalbtnn:hover{
+        color: white;
+        margin-top: 16px;
+        width: 130px;
+        height: 20px;
+        font-size: 14px;
+        font-family: "Montserrat";
+        background-color: black;
+    }
+
+    .sold-out{
+        background-color: grey;
+    }
+
+    .kateogtiess{
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .katt{
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 60px;
+        font-family: "Montserrat";
+    }
+
+    .colorkat1{
+        border: #FFE0B2;
+        background-color: #FFE0B2;
+        width: 105px;
+        height: 11px;
+    }
+
+    .colorkat2{
+        border: #AD86CC;
+        background-color: #AD86CC;
+        width: 105px;
+        height: 11px;
+    }
+
+    .colorkat3{
+        border: #6F8DBA;
+        background-color: #6F8DBA;
+        width: 105px;
+        height: 11px;
+    }
+
+    .colorkat4{
+        border: #719C5D;
+        background-color: #719C5D;
+        width: 105px;
+        height: 11px;
+    }
+
+    .colorkat5{
+        border: #FFD7D7;
+        background-color: #FFD7D7;
+        width: 105px;
+        height: 11px;
+    }
+
+    .nedostupno{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat";
+        margin-top: 100px;
+    }
+
+    .kvadratt{
+        border: 1px white solid;
+        background-color: transparent;
+        width: 44px;
+        height: 44px;
+    }
+
+    .nedos{
+        margin-left: 10px;
+        color: white;
+        font-size: 14px;
+    }
+
+
+    label{
+        background-color: transparent;
+    }
+
+    input{
+        background-color: transparent;
+    }
+    /* блок схема зала конец */
+
+/* блок подвал начало */
+footer{
+    font-family: "Montserrat";
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+.podval{
+    display: flex;
+    justify-content: center;
+}
+
+.credit{
+    color: white;
+}
+
+.navfoot{
+    color: white;
+    margin-left: 80px;
+}
+
+.dopnav{
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.mainav{
+    font-size: 20px;
+}
+
+.logotrip{
+    font-size: 32px;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.opisaniebrend{
+    width: 500px;
+    margin-bottom: 90px;
+}
+
+.copyright{
+    color: rgba(255, 255, 255, 0.253);
+}
+
+.credit{
+    margin-right: 360px;
+}
+
+.sold-out{
+    background-color: grey;
+}
+
+.seat.sold-out{
+    background-color: grey;
+}
+/* блок подвала конец */
+
+
+@media screen and (max-width: 820px){
+    /* блок схема зала начало */
+    .schema{
+        display: flex;
+        flex-direction: column;
+        border: 1px white solid;
+        background-color: transparent;
+        margin-top: 50px;
+        width: 750px;
+        height: 920px;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat";
+        color: white;
+    }
+
+    .schemazalaa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ryad{
+        display: flex;
+        gap: 30px;
+    }
+
+    .ryadchislo{
+        display: flex;
+        gap: 50px;
+        margin-left: 40px;
+    }
+
+    .chislo{
+        margin-top: 30px;
+    }
+
+    .seat{
+        border: 1px white solid;
+        width: 30px;
+        height: 26px;
+        margin-top: 20px;
+    }
+
+    .scene{
+        background-color: transparent;
+        position: relative;
+        bottom: 50px;
+        width: 720px;
+    }
+
+    .nazvaniescen{
+        color: white;
+        font-family: "Montserrat";
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    .nazvaniescen2{
+        color: white;
+        font-family: "Montserrat";
+        font-size: 20px;
+        font-weight: 200;
+        margin-top: 50px;
+    }
+
+    .scenes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .category1{
+        background-color: #719C5D;
+    }
+
+    .category2{
+        background-color: #FFD7D7;
+    }
+
+    .category3{
+        background-color:#6F8DBA ;
+    }
+
+    .category4{
+        background-color: #AD86CC;
+    }
+
+    .category5{
+        background-color: #FFE0B2;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+    }
+
+    .close-button {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close-button:hover, .close-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .zagolovmodal{
+        margin-top: 15px;
+        font-family: "Montserrat";
+        background-color: transparent;
+    }
+
+    .opisaniemodal{
+        margin-top: 15px;
+        font-family: "Montserrat";
+        background-color: transparent;
+    }
+
+    .modalbtnn{
+        margin-top: 16px;
+        width: 130px;
+        height: 20px;
+        font-size: 14px;
+        font-family: "Montserrat";
+        background-color: transparent;
+        transition: 0.5s;
+        color: black;
+    }
+
+    .modalbtnn:hover{
+        color: white;
+        margin-top: 16px;
+        width: 130px;
+        height: 20px;
+        font-size: 14px;
+        font-family: "Montserrat";
+        background-color: black;
+    }
+
+    .sold-out{
+        background-color: grey;
+    }
+
+    .kateogtiess{
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .katt{
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 60px;
+        font-family: "Montserrat";
+    }
+
+    .colorkat1{
+        border: #FFE0B2;
+        background-color: #FFE0B2;
+        width: 105px;
+        height: 11px;
+    }
+
+    .colorkat2{
+        border: #AD86CC;
+        background-color: #AD86CC;
+        width: 105px;
+        height: 11px;
+    }
+
+    .colorkat3{
+        border: #6F8DBA;
+        background-color: #6F8DBA;
+        width: 105px;
+        height: 11px;
+    }
+
+    .colorkat4{
+        border: #719C5D;
+        background-color: #719C5D;
+        width: 105px;
+        height: 11px;
+    }
+
+    .colorkat5{
+        border: #FFD7D7;
+        background-color: #FFD7D7;
+        width: 105px;
+        height: 11px;
+    }
+
+    .nedostupno{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat";
+        margin-top: 100px;
+    }
+
+    .kvadratt{
+        border: 1px white solid;
+        background-color: transparent;
+        width: 44px;
+        height: 44px;
+    }
+
+    .nedos{
+        margin-left: 10px;
+        color: white;
+        font-size: 14px;
+    }
+    /* блок схема зала конец */
+}
+
+@media screen and (max-width: 415px){
+    .schema{
+        display: flex;
+        flex-direction: column;
+        border: 1px white solid;
+        background-color: transparent;
+        margin-top: 50px;
+        width: 360px;
+        height: 920px;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat";
+        color: white;
+    }
+
+    .schemazalaa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ryad{
+        display: flex;
+        gap: 10px;
+    }
+
+    .ryadchislo{
+        display: flex;
+        gap: 18px;
+        margin-left: 40px;
+    }
+
+    .chislo{
+        margin-top: 30px;
+    }
+
+    .seat{
+        border: 1px white solid;
+        width: 18px;
+        height: 14px;
+        margin-top: 20px;
+    }
+
+    .scene{
+        background-color: transparent;
+        position: relative;
+        bottom: 50px;
+        width: 350px;
+    }
+
+    .nazvaniescen{
+        color: white;
+        font-family: "Montserrat";
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    .nazvaniescen2{
+        color: white;
+        font-family: "Montserrat";
+        font-size: 20px;
+        font-weight: 200;
+        margin-top: 50px;
+    }
+
+    .scenes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .category1{
+        background-color: #719C5D;
+    }
+
+    .category2{
+        background-color: #FFD7D7;
+    }
+
+    .category3{
+        background-color:#6F8DBA ;
+    }
+
+    .category4{
+        background-color: #AD86CC;
+    }
+
+    .category5{
+        background-color: #FFE0B2;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+    }
+
+    .close-button {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close-button:hover, .close-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .zagolovmodal{
+        margin-top: 15px;
+        font-family: "Montserrat";
+        background-color: transparent;
+    }
+
+    .opisaniemodal{
+        margin-top: 15px;
+        font-family: "Montserrat";
+        background-color: transparent;
+    }
+
+    .modalbtnn{
+        margin-top: 16px;
+        width: 130px;
+        height: 20px;
+        font-size: 14px;
+        font-family: "Montserrat";
+        background-color: transparent;
+        transition: 0.5s;
+        color: black;
+    }
+
+    .modalbtnn:hover{
+        color: white;
+        margin-top: 16px;
+        width: 130px;
+        height: 20px;
+        font-size: 14px;
+        font-family: "Montserrat";
+        background-color: black;
+    }
+
+    .sold-out{
+        background-color: grey;
+    }
+
+    .seat.sold-out{
+        background-color: grey;
+    }
+
+    .kateogtiess{
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .katt{
+        display: flex;
+        flex-wrap: wrap;
+        width: 340px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 60px;
+        font-family: "Montserrat";
+    }
+
+    .colorkat1{
+        border: #FFE0B2;
+        background-color: #FFE0B2;
+        width: 75px;
+        height: 11px;
+    }
+
+    .colorkat2{
+        border: #AD86CC;
+        background-color: #AD86CC;
+        width: 75px;
+        height: 11px;
+    }
+
+    .colorkat3{
+        border: #6F8DBA;
+        background-color: #6F8DBA;
+        width: 75px;
+        height: 11px;
+    }
+
+    .colorkat4{
+        border: #719C5D;
+        background-color: #719C5D;
+        width: 75px;
+        height: 11px;
+    }
+
+    .colorkat5{
+        border: #FFD7D7;
+        background-color: #FFD7D7;
+        width: 75px;
+        height: 11px;
+    }
+
+    .nedostupno{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat";
+        margin-top: 100px;
+    }
+
+    .kvadratt{
+        border: 1px white solid;
+        background-color: transparent;
+        width: 44px;
+        height: 44px;
+    }
+
+    .nedos{
+        margin-left: 10px;
+        color: white;
+        font-size: 14px;
+    }
+}
+
+.selected {
+    background-color: rgb(173, 2, 2) !important;
+      transition: all 0.3s ease-in-out;
+}
+
+.buttonbuy{
+    color: white;
+    font-size: 16px;
+    border: 1px white solid;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.total{
+    background-color: transparent;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    font-size: 14px;
+    color: black;
+    pointer-events: none; /* Убираем возможность взаимодействия с самим tooltip */
+}
+
+

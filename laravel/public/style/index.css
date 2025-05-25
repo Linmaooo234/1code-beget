@@ -1,0 +1,1474 @@
+* {
+    background-color: #000000;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+#burger, [for=burger]{
+    display:none;
+}
+
+.logotipadaptiv{
+    display: none;
+}
+
+@font-face {
+    font-family: "Bergamasco Bold";
+    src:
+      local("Bergamasco Bold"),
+      url("/fonts/Bergamasco\ Bold.otf")
+  }
+
+@font-face {
+    font-family: "Bergamasco Light";
+    src:
+      local("Bergamasco Light"),
+      url("/fonts/Bergamasco\ Light.otf")
+  }
+
+@font-face {
+    font-family: "Bergamasco Regular";
+    src:
+      local("Bergamasco Regular"),
+      url("/fonts/Bergamasco\ Regular.otf")
+  }
+
+/* шапка начало */
+header {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+ .cabinet{
+    position: relative;
+    left: 120px;
+    color: white;
+ }
+
+ .buttonvhod{
+    margin-top: 20px;
+ }
+
+.avatarlaa{
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    margin-left: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.headerpunkt {
+    color: white;
+    font-size: 14px;
+}
+
+.enter{
+    position: relative;
+    left: 290px;
+    color: white;
+    border:0.1px solid white;
+    width: 141px;
+    font-weight: lighter;
+    height: 24px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.avatarlaa{
+    position: relative;
+    left: 200px;
+    top: 20px;
+}
+
+.exittt{
+    position: relative;
+    left: 290px;
+    color: white;
+    border:0.1px solid white;
+    width: 141px;
+    font-weight: lighter;
+    height: 24px;
+    font-size: 14px;
+    transition: 0.5s;
+    bottom: 20px;
+}
+
+.exittt:hover{
+    background-color: white;
+    color: black;
+}
+
+.enter:hover{
+    background-color: white;
+    color: black;
+}
+
+.logotip{
+    width: 120px;
+}
+/* шапка конец */
+
+/* баннер начало */
+.banner {
+    position: relative;
+    height: 875px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/storage/media/mainpagebanner.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(100%);
+    transition: filter 1.5s;
+    z-index: 0;
+}
+
+.banner:hover::before {
+    filter: brightness(30%);
+}
+
+.banner:hover .bannerzagolovok {
+    color: white;
+    transform: translateX(0)translateY(0);
+}
+
+.bannerzagolovok2 {
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    background-color: transparent;
+    position: relative;
+    top: 20px;
+    font-size: 180px;
+    opacity: 0;
+    transform: translateX(30px)translateY(-30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color: red;
+}
+
+.banner:hover .bannerzagolovok2 {
+    display: block;
+    opacity: 1;
+    transform: translateX(0)translateY(0px);
+}
+
+.bannerzagolovok {
+    transform: translateX(-30px)translateY(30px);
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    background-color: transparent;
+    position: relative;
+    top: 100px;
+    font-size: 180px;
+    transition: 0.5s;
+}
+
+.subtitle{
+    font-family: Bergamasco Light;
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: transparent;
+    font-size: 48px;
+    padding: 10px;
+}
+
+.banner-content{
+    background-color: transparent;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 40px;
+    left: 900px;
+    background-color: transparent;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* баннер конец */
+
+/* о нас начало */
+.about-us {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.aboutuss{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 656px;
+    margin-right: 20px;
+}
+
+.about-text{
+    margin-left: 40px;
+}
+
+.about-text h2 {
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    width: 600px;
+    font-size: 4vw;
+    color: white;
+    margin: 0;
+}
+
+.opisanie {
+    margin: 5px 0 0;
+    color: white;
+    font-size: 1.0vw;
+    font-family: "Montserrat";
+    font-weight: lighter;
+    max-width: 700px;
+}
+
+.nadzag{
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    font-size: 20px;
+}
+/* о нас конец */
+
+/* афиша начало */
+
+.card{
+    margin-left: 60px;
+}
+
+    .afish{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 240px;
+    }
+
+    .zagalovafiha{
+        margin-top: 120px;
+        font-size: 80px;
+        color: white;
+        font-family: 'Bergamasco Light';
+        font-weight: 200;
+        margin-right: 1300px;
+    }
+
+    .catalogcard{
+        display: flex;
+        gap: 120px;
+    }
+
+    .catalogg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainchislo{
+        color: white;
+        font-size: 96px;
+        font-family: 'Bergamasco Light';
+        font-weight: 200;
+    }
+
+    .cardimg{
+        margin-bottom: 20px;
+    }
+
+    .monthname{
+        color: white;
+        font-size: 24px;
+        font-family: 'Bergamasco Light';
+        margin-left: 10px;
+    }
+
+    .nameafisha{
+        font-family: 'Bergamasco Light';
+        font-weight: 200;
+        margin-top: 20px;
+        font-size: 40px;
+        color: white;
+    }
+
+    .podrobnee{
+        margin-top: 20px;
+        color: white;
+        font-family: 'Bergamasco Light';
+        font-weight: 200;
+    }
+
+    .stick{
+        margin-top: 20px;
+        width: 250px;
+        border: 0.6px solid white;
+    }
+
+    .date{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .yes{
+        display: flex;
+    }
+
+    .arrownext{
+        margin-bottom: 150px;
+        margin-left: 120px;
+    }
+/* афиша конец */
+
+/* новости начало */
+    .neww{
+        color: white;
+        display: flex;
+        gap: 120px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .zagolovokknovost{
+        font-family: 'Bergamasco Light';
+        font-weight: 200;
+        color: #AB3130;
+        font-size: 80px;
+        margin-top: 120px;
+        margin-left: 1200px;
+    }
+
+    .zagolovoknovosot{
+        font-family: 'Bergamasco Light';
+        font-weight: 200;
+        color: white;
+        font-size: 32px;
+        margin-top: 10px;
+    }
+
+    .novostpic{
+        padding: 10px;
+           object-fit: cover; /* Обрезаем картинку */
+            width: 380px;
+            height: 200px;
+            vertical-align: middle;
+    }
+
+    .pordrobneenovost{
+        font-family: "Montserrat";
+    }
+/* новости конец */
+
+/* блок аккардеон начало */
+    .faq{
+        gap: 10px;
+        width: 1400px;
+        margin: 100px;
+        margin-left: 220px;
+    }
+
+    .faq__item h3{
+        font-size: 26px;
+        font-weight: 500;
+        color: white;
+        transition: .2s ease-in;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    .faq__item p{
+        height: 0;
+        overflow: hidden;
+        color: white;
+        margin-top: 20px;
+        transition: .2s ease-in;
+    }
+
+    .arrowdow{
+        width: 50px;
+        margin-top: 10px;
+    }
+
+    .zagolovacc{
+        font-family: 'Bergamasco Light';
+        font-weight: 200;
+        font-size: 36px;
+    }
+
+    .opisacc{
+        font-size: 20px;
+        font-family: "Montserrat";
+        font-weight: 200;
+    }
+
+    .zagolovok{
+        display: flex;
+    }
+/* блок аккардеон конец */
+
+/* блок подвал начало */
+    footer{
+        font-family: "Montserrat";
+        margin-top: 120px;
+        margin-bottom: 40px;
+    }
+
+    .podval{
+        display: flex;
+        justify-content: center;
+    }
+
+    .credit{
+        color: white;
+    }
+
+    .navfoot{
+        color: white;
+        margin-left: 80px;
+    }
+
+    .dopnav{
+        font-size: 16px;
+        font-weight: 200;
+        margin-top: 20px;
+    }
+
+    .mainav{
+        font-size: 20px;
+    }
+
+    .logotrip{
+        font-size: 32px;
+        font-family: 'Bergamasco Light';
+        font-weight: 200;
+        margin-bottom: 10px;
+    }
+
+    .opisaniebrend{
+        width: 500px;
+        margin-bottom: 90px;
+    }
+
+    .copyright{
+        color: rgba(255, 255, 255, 0.253);
+    }
+
+    .credit{
+        margin-right: 360px;
+    }
+/* блок подвала конец */
+
+/* адаптация под ipad начало */
+@media screen and (max-width: 820px){
+    /* шапка начало */
+header {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+ .cabinet{
+    position: relative;
+    left: 120px;
+    color: white;
+ }
+
+ .buttonvhod{
+    margin-top: 20px;
+ }
+
+.avatarlaa{
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    margin-left: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.headerpunkt {
+    color: white;
+    font-size: 12px;
+}
+
+.enter{
+    position: relative;
+    left: 190px;
+    color: white;
+    border:0.1px solid white;
+    width: 141px;
+    font-weight: lighter;
+    height: 24px;
+    font-size: 14px;
+
+    transition: 0.5s;
+}
+
+.avatarlaa{
+    position: relative;
+    left: 200px;
+    top: 20px;
+}
+
+.exittt{
+    position: relative;
+    left: 1px;
+    color: white;
+    border:0.1px solid white;
+    width: 141px;
+    font-weight: lighter;
+    height: 24px;
+    font-size: 14px;
+    transition: 0.5s;
+    bottom: 10px;
+}
+
+.cabinet{
+    display: none;
+}
+.exittt:hover{
+    background-color: white;
+    color: black;
+}
+
+.enter:hover{
+    background-color: white;
+    color: black;
+}
+
+.logotip{
+    width: 120px;
+}
+.banner {
+    position: relative;
+    height: 875px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/storage/media/mainpagebanner.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(100%);
+    transition: filter 1.5s;
+    z-index: 0;
+}
+
+.banner:hover::before {
+    filter: brightness(30%);
+}
+
+.banner:hover .bannerzagolovok {
+    color: white;
+    transform: translateX(0)translateY(0);
+}
+
+.bannerzagolovok2 {
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    background-color: transparent;
+    position: relative;
+    top: 20px;
+    font-size: 40px;
+    opacity: 0;
+    transform: translateX(30px)translateY(-30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color: red;
+}
+
+.banner:hover .bannerzagolovok2 {
+    display: block;
+    opacity: 1;
+    transform: translateX(0)translateY(0px);
+}
+
+.bannerzagolovok {
+    transform: translateX(-30px)translateY(30px);
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    background-color: transparent;
+    position: relative;
+    top: 70px;
+    margin-left: 40px;
+    font-size: 120px;
+    transition: 0.5s;
+}
+
+.subtitle{
+    font-family: Bergamasco Light;
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: transparent;
+    font-size: 48px;
+    padding: 10px;
+}
+
+.banner-content{
+    background-color: transparent;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 40px;
+    left: 400px;
+    background-color: transparent;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* о нас начало */
+.about-us {
+    margin-top: 120px;
+    display: block;
+    align-items: center;
+    padding: 20px;
+}
+
+.aboutuss{
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 656px;
+    margin-left: 30px;
+}
+
+.about-text{
+    margin-left: 40px;
+}
+
+.about-text h2 {
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    width: 600px;
+    font-size: 8vw;
+    color: white;
+    margin: 0;
+}
+
+.opisanie {
+    margin: 5px 0 0;
+    color: white;
+    font-size: 3.5vw;
+    font-family: "Montserrat";
+    font-weight: lighter;
+    max-width: 700px;
+}
+
+.nadzag{
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    font-size: 30px;
+    margin-top: 30px;
+}
+/* о нас конец */
+
+/* афиша начало */
+.afish{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1px;
+}
+
+.zagalovafiha{
+    margin-top: 120px;
+    font-size: 80px;
+    color: white;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    margin-left: 220px;
+}
+
+.catalogcard{
+    display: block;
+    gap: 80px;
+}
+
+.catalogg{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 220px;
+}
+
+.mainchislo{
+    color: white;
+    font-size: 96px;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+}
+
+.cardimg{
+    margin-bottom: 20px;
+}
+
+.monthname{
+    color: white;
+    font-size: 24px;
+    font-family: 'Bergamasco Light';
+    margin-left: 10px;
+}
+
+.nameafisha{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    margin-top: 20px;
+    font-size: 40px;
+    color: white;
+}
+
+.podrobnee{
+    margin-top: 20px;
+    color: white;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+
+.stick{
+    margin-top: 20px;
+    width: 250px;
+    border: 0.6px solid white;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+}
+
+.yes{
+    display: flex;
+}
+
+.arrownext{
+    margin-top: 40px;
+}
+/* афиша конец */
+
+/* новости начало */
+.neww{
+    color: white;
+    display: block;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 210px;
+}
+
+.zagolovokknovost{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    color: #AB3130;
+    font-size: 80px;
+    margin-top: 120px;
+    margin-left: 210px;
+}
+
+.zagolovoknovosot{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    color: white;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.novostpic{
+    padding: 10px;
+}
+
+.pordrobneenovost{
+    font-family: "Montserrat";
+}
+/* новости конец */
+
+/* блок аккардеон начало */
+.faq{
+    gap: 10px;
+    width: 780px;
+    margin: 100px;
+    margin-left: 30px;
+}
+
+.faq__item h3{
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    transition: .2s ease-in;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.faq__item p{
+    height: 0;
+    overflow: hidden;
+    color: white;
+    margin-top: 20px;
+    transition: .2s ease-in;
+}
+
+.arrowdow{
+    width: 50px;
+    margin-top: 10px;
+}
+
+.zagolovacc{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    font-size: 36px;
+}
+
+.opisacc{
+    font-size: 20px;
+    font-family: "Montserrat";
+    font-weight: 200;
+}
+
+.zagolovok{
+    display: flex;
+}
+/* блок аккардеон конец */
+
+/* блок подвал начало */
+footer{
+    font-family: "Montserrat";
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+.podval{
+    display: flex;
+    justify-content: center;
+}
+
+.credit{
+    color: white;
+}
+
+.navfoot{
+    color: white;
+    margin-left: 80px;
+}
+
+.dopnav{
+    font-size: 12px;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.mainav{
+    font-size: 20px;
+}
+
+.logotrip{
+    font-size: 28px;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.opisaniebrend{
+    width: 300px;
+    margin-bottom: 90px;
+}
+
+.copyright{
+    color: rgba(255, 255, 255, 0.253);
+    font-size: 12px;
+}
+
+.credit{
+    margin-right: 10px;
+}
+/* блок подвала конец */
+}
+/* адапатация под ipad конец */
+
+/* адаптив телефон */
+@media screen and (max-width: 415px){
+
+    header{
+        display: flex;
+    }
+
+    .exittt{
+        position: relative;
+        left: 2px;
+        color: white;
+        border:0.1px solid white;
+        width: 141px;
+        font-weight: lighter;
+        height: 24px;
+        font-size: 14px;
+        transition: 0.5s;
+        background-color: transparent;
+        bottom: 20px;
+    }
+
+    .cabinet{
+        position: relative;
+        left: 1px;
+        color: black;
+     }
+
+     .exit222{
+        background-color: transparent;
+     }
+
+
+    nav{
+        background-color: #efefef;
+        z-index: 1000;
+        color: white;
+        display: none;
+        position: fixed;
+        right: 60px;
+        top: 10px;
+        width: 65%;
+        height: 100%;
+    }
+
+    .logotip{
+        display: none;
+    }
+
+    .enter{
+        position: relative;
+        color: black;
+        border:1px solid black;
+        background-color: transparent;
+        background-color: white;
+        width: 141px;
+        font-weight: lighter;
+        height: 24px;
+        font-size: 14px;
+        transition: 0.5s;
+    }
+
+    .enter:hover{
+        display: none;
+    }
+
+    .links{
+        background-color: transparent;
+        color: black;
+    }
+
+    .headpic{
+        display: none;
+    }
+
+    .logotipadaptiv{
+        width: 100px;
+        height: auto;
+        margin-top: 10px;
+        margin-left: 30px;
+        display: block;
+        position: relative;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    [for=burger]{
+    z-index: 1;
+      display: block;
+      position: fixed;
+      right: 20px;
+      top: 5px;
+  }
+
+  .headerpunkt{
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+  }
+
+  .headpicadaptiv{
+    margin-top: 10px;
+    margin-left: 100px;
+    display: block;
+  }
+
+  .headpic{
+    display: none;
+  }
+
+  [for=burger]::before{
+      color: white;
+      z-index: 1;
+      content: '≡';
+      font-size: 50px;
+  }
+
+  #burger:checked + label + nav{
+     display: flex;
+     flex-direction: column;
+     font-size: 25px;
+      animation: show 0.5s;
+      gap: 60px;
+  }
+
+  #burger:checked + [for = burger]::before{
+      content: '⊗';
+      color: white;
+      z-index: 2;
+      font-size: 30px;
+      animation: show 0.5s;
+  }
+
+  @keyframes show{
+      0%{
+          opacity: 0;
+      }
+
+      100%{
+          opacity: 1;
+      }
+  }
+
+  nav{
+    display: none;
+  }
+
+  .exittt{
+    background-color: transparent;
+  }
+
+  div{
+    background-color: transparent;
+  }
+
+  .cabinet{
+        background-color: transparent;
+        font-size: 20px;
+        position: relative;
+        bottom: 30px;
+  }
+
+  .exittt{
+    color: red;
+    border: transparent;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+
+  a{
+    background-color: transparent;
+  }
+
+  .enter{
+    font-size: 20px;
+  }
+  /* баннер */
+  .banner {
+    position: relative;
+    height: 875px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    color: black;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.bannerzagolovok {
+    transform: translateX(-30px)translateY(30px);
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    background-color: transparent;
+    position: relative;
+    top: 600px;
+    margin-left: 60px;
+    font-size: 60px;
+    transition: 0.5s;
+}
+
+
+.banner:hover .bannerzagolovok {
+    display: none;
+}
+
+.banner:hover .bannerzagolovok {
+    display: none;
+}
+
+.bannerzagolovok2 {
+    display: none;
+}
+
+.banner:hover .bannerzagolovok2 {
+    display: none;
+}
+
+.arrow{
+    display: none;
+}
+
+/* о нас начало */
+.about-us {
+    margin-top: 60px;
+    display: block;
+    align-items: center;
+    padding: 20px;
+}
+
+.aboutuss{
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 656px;
+    margin-right: 1px;
+}
+
+.about-text{
+    margin-left: 40px;
+}
+
+.about-text h2 {
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    width: 240px;
+    font-size: 8vw;
+    color: white;
+    margin: 0;
+}
+
+.opisanie {
+    margin: 5px 0 0;
+    color: white;
+    font-size: 5vw;
+    font-family: "Montserrat";
+    font-weight: lighter;
+    max-width: 320px;
+}
+
+.nadzag{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: white;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    font-size: 20px;
+}
+/* о нас конец */
+
+/* афиша начало */
+.afish{
+    display: block;
+    align-items: start;
+    justify-content: start;
+    margin-left: 70px;
+}
+
+
+.zagalovafiha{
+    margin-top: 60px;
+    margin-left: 1px;
+    font-size: 60px;
+    color: white;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    width: 120px;
+    margin-right: 1px;
+}
+
+.catalogcard{
+    display: block;
+    gap: 80px;
+}
+
+.catalogg{
+    display: block;
+    align-items: start;
+    justify-content: start;
+    margin-left: 30px;
+}
+
+.mainchislo{
+    color: white;
+    font-size: 96px;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+}
+
+.cardimg{
+    margin-bottom: 20px;
+    width: 226px;
+    height: 437px;
+}
+
+.card{
+    margin-bottom: 30px;
+}
+
+.monthname{
+    color: white;
+    font-size: 24px;
+    font-family: 'Bergamasco Light';
+    margin-left: 10px;
+}
+
+.nameafisha{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    margin-top: 20px;
+    font-size: 40px;
+    color: white;
+}
+
+.podrobnee{
+    margin-top: 20px;
+    color: white;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+}
+
+.stick{
+    margin-top: 20px;
+    width: 250px;
+    border: 0.6px solid white;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+}
+
+.yes{
+    display: flex;
+}
+
+.arrownext{
+    margin-top: 60px;
+}
+/* афиша конец */
+
+/* новости начало */
+.neww{
+    color: white;
+    display:block;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+}
+
+.zagolovokknovost{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    color: #AB3130;
+    font-size: 60px;
+    margin-top: 60px;
+    margin-left: 70px;
+}
+
+.zagolovoknovosot{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    color: white;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.novostpic{
+    padding: 10px;
+}
+
+.pordrobneenovost{
+    font-family: "Montserrat";
+}
+
+.novostpic{
+    width: 302px;
+    height: 170px;
+}
+/* новости конец */
+
+/* блок аккардеон начало */
+.faq{
+    gap: 10px;
+    width: 380px;
+    margin: 100px;
+    margin-left: 20px;
+}
+
+.faq__item h3{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    transition: .2s ease-in;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.faq__item p{
+    height: 0;
+    overflow: hidden;
+    color: white;
+    margin-top: 20px;
+    transition: .2s ease-in;
+}
+
+.arrowdow{
+    width: 50px;
+    margin-top: 10px;
+}
+
+.zagolovacc{
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.opisacc{
+    font-size: 16px;
+    width: 350px;
+    font-family: "Montserrat";
+    font-weight: 200;
+}
+
+.zagolovok{
+    display: flex;
+}
+/* блок аккардеон конец */
+
+/* блок подвал начало */
+footer{
+    font-family: "Montserrat";
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.podval{
+    display: block;
+    justify-content: center;
+}
+
+.credit{
+    color: white;
+    margin-left: 80px;
+}
+
+.navfoot{
+    color: white;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+.dopnav{
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.mainav{
+    font-size: 20px;
+}
+
+.logotrip{
+    font-size: 32px;
+    font-family: 'Bergamasco Light';
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.opisaniebrend{
+    width: 260px;
+    margin-bottom: 30px;
+}
+
+.copyright{
+    display: none;
+    color: rgba(255, 255, 255, 0.253);
+}
+
+.credit{
+    margin-right: 3px;
+}
+/* блок подвала конец */
+
+}
